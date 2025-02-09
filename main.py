@@ -37,7 +37,7 @@ if HAS_SSL:
 else:
     URL = "http://{}/".format(FQDN)
 
-@StreamBot.on_message(filters.text)
+@StreamBot.on_message(filters.text & filters.command('start'))
 async def okzz(c: Client, m: Message):
     await m.reply("Send me any file to get direct download link")
                       
