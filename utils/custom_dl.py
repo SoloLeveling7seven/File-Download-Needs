@@ -224,8 +224,6 @@ class ByteStreamer:
             pass
         finally:
             logging.debug("Finished yielding file with {current_part} parts.")
-            work_loads[index] -= 1
-
     
     async def clean_cache(self) -> None:
         """
