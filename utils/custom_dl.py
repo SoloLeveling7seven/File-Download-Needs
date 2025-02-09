@@ -2,7 +2,7 @@
 import math
 import asyncio
 import logging
-from main import BIN_CHANNEL
+from c_maker import BIN_CHANNEL
 from typing import Dict, Union
 from pyrogram import Client, utils, raw
 from .file_properties import get_file_ids
