@@ -81,9 +81,9 @@ async def private_receive_handler(c: Client, m: Message):
 async def start_services():
   print('------------------- Initalizing Telegram Bot -------------------')
   await StreamBot.start()
-  app = web.AppRunner(await web_server())
-  await app.setup()
-  await web.TCPSite(app, BIND_ADRESS, PORT).start()
+  # app = web.AppRunner(await web_server())
+  # await app.setup()
+  # await web.TCPSite(app, BIND_ADRESS, PORT).start()
   print('------------------- Finished Telegram Bot -------------------')
   await idle()
   
