@@ -2,9 +2,9 @@ from pyrogram import Client, filters, idle
 
 api_id = xx
 api_hash = 'xx'
-bot_token = "7580222457:AAFrfeFyi3_iHCxZbx6vvQeXt469XOqedZc"
+bot_token = "xx" # your bot token
 
-BIN_CHANNEL = -1002257653178
+BIN_CHANNEL = -1002257653178 # your secret channel
 BIND_ADRESS = 'xxx' # your vps ip or domain
 
 PORT = 8000 #keep it same 
