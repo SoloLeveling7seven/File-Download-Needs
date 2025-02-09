@@ -47,7 +47,7 @@ async def okzz(c: Client, m: Message):
 async def private_receive_handler(c: Client, m: Message):
     try:
 
-        log_msg = await m.forward(chat_id=Var.BIN_CHANNEL)
+        log_msg = await m.forward(chat_id=BIN_CHANNEL)
         
         online_link = f"{URL}{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
         
