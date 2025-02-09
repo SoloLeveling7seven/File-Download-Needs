@@ -70,8 +70,8 @@ async def private_receive_handler(c: Client, m: Message):
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('⚡ ᴅᴏᴡɴʟᴏᴀᴅ ⚡', url=online_link)]]) #Download Link
         )
-    except FloodWait as e:
-        print(f"Sleeping for {str(e.value)}s")
+    except Exception as e:
+        print(e)
 
 
 
@@ -81,6 +81,7 @@ async def start_services():
   app = web.AppRunner(await web_server())
   await app.setup()
   await web.TCPSite(app, BIND_ADRESS, PORT).start()
+  print('------------------- Finished Telegram Bot -------------------')
   await idle()
   
 
