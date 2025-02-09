@@ -2,14 +2,13 @@
 import math
 import asyncio
 import logging
-from Adarsh.vars import Var
+from main import BIN_CHANNEL
 from typing import Dict, Union
-from Adarsh.bot import work_loads
 from pyrogram import Client, utils, raw
 from .file_properties import get_file_ids
 from pyrogram.session import Session, Auth
 from pyrogram.errors import AuthBytesInvalid
-from Adarsh.server.exceptions import FIleNotFound
+from server.exceptions import FIleNotFound
 from pyrogram.file_id import FileId, FileType, ThumbnailSource
 
 
@@ -59,7 +58,7 @@ class ByteStreamer:
         Generates the properties of a media file on a specific message.
         returns ths properties in a FIleId class.
         """
-        file_id = await get_file_ids(self.client, Var.BIN_CHANNEL, id)
+        file_id = await get_file_ids(self.client, BIN_CHANNEL, id)
         logging.debug(f"Generated file ID and Unique ID for message with ID {id}")
         if not file_id:
             logging.debug(f"Message with ID {id} not found")
@@ -186,7 +185,7 @@ class ByteStreamer:
         Thanks to Eyaadh <https://github.com/eyaadh>
         """
         client = self.client
-        work_loads[index] += 1
+        
         logging.debug(f"Starting to yielding file with client {index}.")
         media_session = await self.generate_media_session(client, file_id)
 
