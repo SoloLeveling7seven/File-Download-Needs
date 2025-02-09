@@ -1,13 +1,13 @@
 from pyrogram import Client, filters, idle
 
-api_id = 28610306
-api_hash = '3f57cc57f8883bd604baf3b814ffe023'
+api_id = xx
+api_hash = 'xx'
 bot_token = "7580222457:AAFrfeFyi3_iHCxZbx6vvQeXt469XOqedZc"
 
 BIN_CHANNEL = -1002257653178
-BIND_ADRESS = '159.89.168.247'
+BIND_ADRESS = 'xxx' # your vps ip or domain
 
-PORT = 8000
+PORT = 8000 #keep it same 
 
 FQDN = f"{BIND_ADRESS}:{PORT}"
 
