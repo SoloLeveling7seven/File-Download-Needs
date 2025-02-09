@@ -85,11 +85,12 @@ async def start_services():
   # await app.setup()
   # await web.TCPSite(app, BIND_ADRESS, PORT).start()
   print('------------------- Finished Telegram Bot -------------------')
-  await idle()
+  
   
 
 
 if __name__ == '__main__':
   StreamBot.start()
   asyncio.run(start_services())
+  idle()
   
