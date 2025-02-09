@@ -91,6 +91,6 @@ async def start_services():
 
 if __name__ == '__main__':
   StreamBot.start()
-  asyncio.run(start_services())
+  # asyncio.run(start_services())
   idle()
   
