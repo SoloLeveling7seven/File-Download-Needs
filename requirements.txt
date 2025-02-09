@@ -1,0 +1,11 @@
+https://github.com/KurimuzonAkuma/pyrogram/archive/v2.1.33.zip 
+tgcrypto
+aiohttp<=3.8.1
+python-dotenv<=0.20.0
+motor
+aiofiles
+dnspython
+apscheduler
+requests
+psutil
+pyromod==1.5
