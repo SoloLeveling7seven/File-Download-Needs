@@ -38,7 +38,10 @@ else:
     URL = "http://{}/".format(FQDN)
 
 # StreamBot = Client("Downl", bot_token= bot_token , api_id= api_id, api_hash= api_hash, workers=50)
-
+@StreamBot.on_message(filters.text)
+async def okzz(c: Client, m: Message):
+    print("Working")
+                      
 
 @StreamBot.on_message((filters.private) & (filters.document | filters.video | filters.audio | filters.photo))
 async def private_receive_handler(c: Client, m: Message):
