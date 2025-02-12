@@ -1,3 +1,4 @@
+import ssl
 import os
 import sys
 import glob
@@ -64,9 +65,11 @@ async def private_receive_handler(c: Client, m: Message):
 
 async def start_services():
   print('------------------- Initalizing Telegram Bot -------------------')
+  ssl_context = ssl.create_default_context(ssl.Purpose.CLIENT_AUTH)
+  ssl_context.load_cert_chain('domain.crt', 'domain.key')
   app = web.AppRunner(await web_server())
   await app.setup()
-  await web.TCPSite(app, BIND_ADRESS, PORT).start()
+  await web.TCPSite(app, BIND_ADRESS, PORT,ssl_context=ssl_context).start()
   print('------------------- Finished Telegram Bot -------------------')
   
   
