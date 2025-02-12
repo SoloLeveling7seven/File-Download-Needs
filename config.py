@@ -7,7 +7,7 @@ bot_token = "7580222457:AAFrfeFyi3_iHCxZbx6vvQeXt469XOqedZc" # your bot token
 BIN_CHANNEL = -1002257653178 # your secret channel
 BIND_ADRESS = '0.0.0.0' # your vps ip or domain
 
-PORT = 8080 #keep it same 
+PORT = 80 #keep it same 
 
 FQDN = f"{BIND_ADRESS}:{PORT}"
 
