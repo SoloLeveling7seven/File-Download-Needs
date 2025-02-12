@@ -19,7 +19,7 @@ routes = web.RouteTableDef()
 
 @routes.get("/", allow_head=True)
 async def root_route_handler(_):
-    return "I am online"
+    return web.Response(text="I am online")
 
 
 @routes.get(r"/{path:\S+}", allow_head=True)
