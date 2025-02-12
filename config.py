@@ -5,7 +5,7 @@ api_hash = '3f57cc57f8883bd604baf3b814ffe023'
 bot_token = "7580222457:AAFrfeFyi3_iHCxZbx6vvQeXt469XOqedZc" # your bot token
 
 BIN_CHANNEL = -1002257653178 # your secret channel
-BIND_ADRESS = '159.89.168.247' # your vps ip or domain
+BIND_ADRESS = '0.0.0.0' # your vps ip or domain
 
 PORT = 8080 #keep it same 
 
