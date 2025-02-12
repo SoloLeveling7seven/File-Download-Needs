@@ -18,11 +18,8 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from utils.human_readable import humanbytes
 from asyncio import TimeoutError
 from utils.file_properties import get_name, get_hash, get_media_file_size
-from c_maker import StreamBot,URL, FQDN, BIN_CHANNEL
+from config import StreamBot,URL, FQDN, BIN_CHANNEL
 
-api_id = 28610306
-api_hash = '3f57cc57f8883bd604baf3b814ffe023'
-bot_token = "7580222457:AAFrfeFyi3_iHCxZbx6vvQeXt469XOqedZc"
 
 
 @StreamBot.on_message(filters.text & filters.command('start'))
