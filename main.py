@@ -18,7 +18,7 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from utils.human_readable import humanbytes
 from asyncio import TimeoutError
 from utils.file_properties import get_name, get_hash, get_media_file_size
-from config import StreamBot,URL, FQDN, BIN_CHANNEL
+from config import StreamBot,URL, FQDN, BIN_CHANNEL, BIND_ADRESS
 
 
 
