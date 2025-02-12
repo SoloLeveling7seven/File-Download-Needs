@@ -7,7 +7,7 @@ import secrets
 import mimetypes
 from aiohttp import web
 from aiohttp.http_exceptions import BadStatusLine
-from c_maker import StreamBot 
+from config import StreamBot 
 from server.exceptions import FIleNotFound, InvalidHash
 
 from utils.time_format import get_readable_time
