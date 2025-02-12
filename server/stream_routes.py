@@ -21,6 +21,11 @@ routes = web.RouteTableDef()
 async def root_route_handler(_):
     return web.Response(text="I am online")
 
+@routes.get("/hi", allow_head=True)
+async def check_route_handler(_):
+    return web.Response(text="I am online")
+
+
 
 @routes.get(r"/{path:\S+}", allow_head=True)
 async def stream_handler(request: web.Request):
