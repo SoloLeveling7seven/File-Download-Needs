@@ -77,7 +77,7 @@ async def start_services():
   ssl_context.load_cert_chain('domain.crt', 'domain.key')
   app = web.AppRunner(await web_server())
   await app.setup()
-  await web.TCPSite(app, BIND_ADRESS, PORT,ssl_context=ssl_context).start()
+  await web.TCPSite(app, BIND_ADRESS, PORT).start()
   print('------------------- Finished Telegram Bot -------------------')
   
   
