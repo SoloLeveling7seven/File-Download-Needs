@@ -22,6 +22,14 @@ from utils.file_properties import get_name, get_hash, get_media_file_size
 from config import StreamBot,URL, FQDN, BIN_CHANNEL, BIND_ADRESS, PORT
 
 
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+)
+logging.getLogger("aiohttp").setLevel(logging.ERROR)
+logging.getLogger("pyrogram").setLevel(logging.ERROR)
+logging.getLogger("aiohttp.web").setLevel(logging.ERROR)
+
 
 @StreamBot.on_message(filters.text & filters.command('start'))
 async def okzz(c: Client, m: Message):
